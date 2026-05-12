@@ -6,7 +6,7 @@ A structured WCAG 2.2 accessibility reference guide designed to be used with AI 
 
 ## What this is
 
-This is a prompt package, a set of plain Markdown files that give an AI assistant accurate, structured knowledge of WCAG 2.2. When provided as context or a system prompt, the assistant uses these files to:
+This is a prompt package — a set of plain Markdown files that give an AI assistant accurate, structured knowledge of WCAG 2.2. When provided as context or a system prompt, the assistant uses these files to:
 
 - Answer accessibility questions with citations to specific success criteria
 - Audit code or designs and produce structured findings
@@ -56,9 +56,13 @@ Each principle file covers its success criteria in full — intent, what passes,
 ### Claude (claude.ai)
 
 1. Download or clone this repository
-2. In Claude, go to **Projects** and create a new project
-3. Upload the entire `wcag-22/` folder as project knowledge, or paste the contents of `GUIDE.md` as a custom system prompt
-4. Claude will consult the reference files when accessibility questions arise
+2. Package the `Laurence-wcag-referencing-skill-for-LLMs/` folder as a ZIP file if not already
+3. Go to [Customize → Skills](https://claude.ai/customize/skills)
+4. Click the **+** button → **Create skill**
+5. Upload the ZIP file
+6. The skill will appear in your skills list and can be toggled on or off
+
+To replace an existing version: click the **...** menu next to the old skill → **Delete**, then upload the new ZIP.
 
 For Claude Code or API use, pass `GUIDE.md` as a system prompt and make the `references/` folder available in the working directory.
 
