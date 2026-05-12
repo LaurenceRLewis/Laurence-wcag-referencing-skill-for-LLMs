@@ -1,5 +1,5 @@
 ---
-name: wcag-22
+name: Laurence — WCAG 2.2 Reference
 description: >
   Reference this skill for ANY accessibility-related question, task, or code — no exceptions.
   Triggers include: WCAG questions ("does X pass WCAG?", "which success criterion applies?",
