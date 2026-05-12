@@ -6,7 +6,7 @@ A structured WCAG 2.2 accessibility reference guide designed to be used with AI 
 
 ## What this is
 
-This is a prompt package — a set of plain Markdown files that give an AI assistant accurate, structured knowledge of WCAG 2.2. When provided as context or a system prompt, the assistant uses these files to:
+This is a prompt package, a set of plain Markdown files that give an AI assistant accurate, structured knowledge of WCAG 2.2. When provided as context or a system prompt, the assistant uses these files to:
 
 - Answer accessibility questions with citations to specific success criteria
 - Audit code or designs and produce structured findings
