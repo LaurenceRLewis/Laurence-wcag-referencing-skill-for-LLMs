@@ -132,6 +132,7 @@ Read only the file(s) relevant to the question or task:
 | What is new in WCAG 2.2? | `references/wcag-22-new.md` |
 | Full audit | All four principle files + `references/audit-workflow.md` |
 | Conformance level question | `references/conformance.md` |
+| How to manually test SC X.X.X | `references/testing/X.X.X.md` (see Testing Patterns index below) |
 
 ---
 
@@ -287,3 +288,23 @@ All files are in `references/sc/`.
 | Full audit | All four `references/principles/` files |
 | Conformance question | `references/conformance.md` |
 | What is new in WCAG 2.2? | `references/wcag-22-new.md` |
+| How to manually test a specific SC | `references/testing/X.X.X.md` |
+
+---
+
+## Manual Testing Patterns
+
+Files in `references/testing/` provide step-by-step manual test procedures for individual success criteria. Each file follows the structure defined in `references/testing/TEMPLATE.md`.
+
+**When a user asks "how do I test for SC X.X.X" or "how do I manually test [name]":**
+1. Check this index for an authored testing file.
+2. If found, read and present it in full (Task Type F in GUIDE.md).
+3. If not found, generate a pattern using TEMPLATE.md and the relevant `references/sc/` file.
+
+### Available testing patterns
+
+| SC | Name | Level | Testing file |
+|----|------|-------|-------------|
+| 4.1.2 | Name, Role, Value | A | `references/testing/4.1.2.md` |
+
+> As new testing patterns are authored, add a row to this table.

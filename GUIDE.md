@@ -92,6 +92,49 @@ Identify which task type applies, then follow the steps.
 1. Read `references/conformance.md`
 2. Answer using only content from that file — do not rely on general knowledge for conformance rules, as these are jurisdiction-specific and evolve
 
+### F — Manual testing ("how do I test for SC X.X.X?", "how do I test for [Name]?")
+
+Trigger phrases: "how do I test", "how do I manually test", "testing checklist for", "audit steps for", "how to check conformance with".
+
+1. Check whether a testing file exists for the requested SC: `references/testing/X.X.X.md`
+2. **If the file exists:** Read it and present the full test pattern — all seven sections — without summarising or omitting steps. Do not paraphrase the Pass / Fail criteria table.
+3. **If the file does not exist:** State clearly that no dedicated testing pattern exists yet for that SC, then construct a test pattern on the fly using:
+   - The SC's reference file at `references/sc/X.X.X.md` (read it first)
+   - The structure defined in `references/testing/TEMPLATE.md` (read it first)
+   - Follow all seven template sections in order
+   - Mark the response clearly as a generated pattern, not an authored reference file
+4. After presenting the test pattern, offer to:
+   - Clarify any step
+   - Adapt the pattern for a specific component type or context (e.g., "just test the modal")
+   - Add the generated pattern to the skill as a new file (if the user maintains the skill)
+
+**Output format for Task Type F:**
+
+```
+## Manual Test Pattern — SC X.X.X [Name] (Level X)
+
+### Overview
+[One-sentence intent summary]
+
+### Scope
+[What to test / what to skip]
+
+### Tools required
+[Table: tool, purpose, free?]
+
+### Test steps
+[Numbered steps — Action / Expected result / Fail signal]
+
+### Pass / Fail criteria
+[Table mapping each step to pass and fail conditions]
+
+### Common false positives
+[Bullet list]
+
+### Related criteria
+[Bullet list with brief relationship notes]
+```
+
 ---
 
 ## Audit Output Format
@@ -211,7 +254,7 @@ All paths are relative to this guide's root directory.
 
 | File | Contents |
 |------|----------|
-| `INDEX.md` | All 78 SC mapped to files; component → SC routing table |
+| `INDEX.md` | All 78 SC mapped to files; component → SC routing table; testing file index |
 | `references/principles/1-perceivable.md` | SC 1.1.1–1.4.13 |
 | `references/principles/2-operable.md` | SC 2.1.1–2.5.8 |
 | `references/principles/3-understandable.md` | SC 3.1.1–3.3.9 |
@@ -219,3 +262,5 @@ All paths are relative to this guide's root directory.
 | `references/wcag-22-new.md` | All 9 new/changed criteria in detail |
 | `references/audit-workflow.md` | Structured audit process and findings template |
 | `references/conformance.md` | Conformance levels, partial conformance, legal context |
+| `references/testing/TEMPLATE.md` | Canonical structure for all SC manual test pattern files |
+| `references/testing/4.1.2.md` | Manual test pattern — SC 4.1.2 Name, Role, Value |
