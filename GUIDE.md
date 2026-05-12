@@ -4,6 +4,8 @@
 **Specification:** WCAG 2.2 (W3C Recommendation, October 2023)
 **Coverage:** All 78 success criteria — Level A, Level AA, and Level AAA (for reference)
 
+> **Note for Claude users:** Claude loads this package via `SKILL.md`, which is a thin wrapper required by Claude's skills system. All content is here in `GUIDE.md`. If you are using a different AI assistant, start here directly.
+
 ---
 
 ## Purpose

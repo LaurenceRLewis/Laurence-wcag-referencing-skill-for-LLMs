@@ -32,7 +32,10 @@ It is designed to be **LLM-agnostic** — the core content works with any AI ass
 ## File Structure
 
 ```
-wcag-22/
+Laurence-wcag-referencing-skill-for-LLMs/
+├── SKILL.md                          Claude-specific entry point (required by Claude's skills
+│                                     system). Contains YAML frontmatter and a pointer to GUIDE.md.
+│                                     Ignored by all other LLMs — start with GUIDE.md instead.
 ├── GUIDE.md                          Main reference — task workflows, validation checklist,
 │                                     audit format, communication standards
 ├── INDEX.md                          All 78 SC mapped to files; component → SC routing table
@@ -42,10 +45,16 @@ wcag-22/
     │   ├── 2-operable.md             SC 2.1.1 – 2.5.8
     │   ├── 3-understandable.md       SC 3.1.1 – 3.3.9
     │   └── 4-robust.md               SC 4.1.2 – 4.1.3
+    ├── sc/                           Individual file per success criterion (78 files + 4.1.1 removal)
+    │   ├── 1.1.1.md
+    │   ├── 1.4.3.md
+    │   └── ... (one file per SC)
     ├── wcag-22-new.md                The 9 new/changed criteria in WCAG 2.2 (detailed)
     ├── audit-workflow.md             Structured audit process and findings template
     └── conformance.md                Levels, partial conformance, legal context
 ```
+
+> **Why two entry point files?** `SKILL.md` is required by Claude's skills system and contains Claude-specific YAML metadata. `GUIDE.md` is the LLM-agnostic content that all assistants — including Claude — use for actual instructions. This keeps the core package neutral while satisfying Claude's technical requirement.
 
 Each principle file covers its success criteria in full — intent, what passes, what fails, common mistakes, and related criteria. The assistant reads only the file(s) relevant to the question rather than loading everything at once.
 
