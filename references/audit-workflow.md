@@ -16,7 +16,7 @@ Declare the scope in your audit output header.
 
 ---
 
-## Step 1 — Structural Review
+## Step 1 Structural Review
 
 Before testing individual SC, review the overall structure:
 
@@ -30,7 +30,7 @@ These quick checks catch Level A failures early.
 
 ---
 
-## Step 2 — Component Inventory
+## Step 2 Component Inventory
 
 List all interactive and content components present:
 
@@ -45,7 +45,7 @@ List all interactive and content components present:
 
 ---
 
-## Step 3 — Test Against SC
+## Step 3 Test Against SC
 
 For each component, test against the relevant SC from the INDEX.md Component → SC Mapping.
 
@@ -101,7 +101,7 @@ For each component, test against the relevant SC from the INDEX.md Component →
 
 ---
 
-## Step 4 — Contrast Testing
+## Step 4 Contrast Testing
 
 For any visual UI work, check contrast:
 
@@ -121,7 +121,7 @@ Report each colour combination tested: foreground, background, ratio, result.
 
 ---
 
-## Step 5 — Output the Findings Table
+## Step 5 Output the Findings Table
 
 Use the format from SKILL.md Audit Output Format:
 

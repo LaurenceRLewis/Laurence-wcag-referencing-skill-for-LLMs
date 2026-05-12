@@ -6,7 +6,7 @@ A structured WCAG 2.2 accessibility reference guide designed to be used with AI 
 
 ## What this is
 
-This is a prompt package — a set of plain Markdown files that give an AI assistant accurate, structured knowledge of WCAG 2.2. When provided as context or a system prompt, the assistant uses these files to:
+This is a prompt package, a set of plain Markdown files that give an AI assistant accurate, structured knowledge of WCAG 2.2. When provided as context or a system prompt, the assistant uses these files to:
 
 - Answer accessibility questions with citations to specific success criteria
 - Audit code or designs and produce structured findings
@@ -14,7 +14,7 @@ This is a prompt package — a set of plain Markdown files that give an AI assis
 - Explain what any WCAG 2.2 criterion means, requires, and looks like in practice
 - Answer conformance questions (what AA requires, partial conformance, legal context)
 
-It is designed to be **LLM-agnostic** — the core content works with any AI assistant. LLM-specific setup instructions are in the [Installation](#installation) section below.
+It is designed to be **LLM-agnostic**, the core content works with any AI assistant. LLM-specific setup instructions are in the [Installation](#installation) section below.
 
 ---
 
@@ -54,9 +54,9 @@ Laurence-wcag-referencing-skill-for-LLMs/
     └── conformance.md                Levels, partial conformance, legal context
 ```
 
-> **Why two entry point files?** `SKILL.md` is required by Claude's skills system and contains Claude-specific YAML metadata. `GUIDE.md` is the LLM-agnostic content that all assistants — including Claude — use for actual instructions. This keeps the core package neutral while satisfying Claude's technical requirement.
+> **Why two entry point files?** `SKILL.md` is required by Claude's skills system and contains Claude-specific YAML metadata. `GUIDE.md` is the LLM-agnostic content that all assistants use for actual instructions. This keeps the core package neutral while satisfying Claude's technical requirement.
 
-Each principle file covers its success criteria in full — intent, what passes, what fails, common mistakes, and related criteria. The assistant reads only the file(s) relevant to the question rather than loading everything at once.
+Each principle file covers its success criteria in full, intent, what passes, what fails, common mistakes, and related criteria. The assistant reads only the file(s) relevant to the question rather than loading everything at once.
 
 ---
 

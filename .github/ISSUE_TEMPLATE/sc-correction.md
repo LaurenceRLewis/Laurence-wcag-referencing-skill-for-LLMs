@@ -7,7 +7,7 @@ assignees: ''
 ---
 
 **Success Criterion**
-SC number and name — e.g. SC 1.4.3 — Contrast (Minimum) (Level AA)
+SC number and name, e.g. SC 1.4.3 Contrast (Minimum) (Level AA)
 
 **File affected**
 e.g. `references/principles/1-perceivable.md`

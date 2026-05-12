@@ -6,7 +6,7 @@ Consult this file first. Use it to identify which reference file contains the su
 
 ## Success Criteria by Principle
 
-### Principle 1 — Perceivable
+### Principle 1 Perceivable
 **File:** `references/principles/1-perceivable.md`
 
 | SC | Name | Level |
@@ -41,7 +41,7 @@ Consult this file first. Use it to identify which reference file contains the su
 | 1.4.12 | Text Spacing | AA |
 | 1.4.13 | Content on Hover or Focus | AA |
 
-### Principle 2 — Operable
+### Principle 2 Operable
 **File:** `references/principles/2-operable.md`
 
 | SC | Name | Level |
@@ -81,7 +81,7 @@ Consult this file first. Use it to identify which reference file contains the su
 | 2.5.7 | Dragging Movements | AA | ← NEW in 2.2 |
 | 2.5.8 | Target Size (Minimum) | AA | ← NEW in 2.2 |
 
-### Principle 3 — Understandable
+### Principle 3 Understandable
 **File:** `references/principles/3-understandable.md`
 
 | SC | Name | Level |
@@ -108,7 +108,7 @@ Consult this file first. Use it to identify which reference file contains the su
 | 3.3.8 | Accessible Authentication (Minimum) | AA | ← NEW in 2.2 |
 | 3.3.9 | Accessible Authentication (Enhanced) | AAA | ← NEW in 2.2 |
 
-### Principle 4 — Robust
+### Principle 4 Robust
 **File:** `references/principles/4-robust.md`
 
 | SC | Name | Level |
@@ -170,7 +170,7 @@ For single-SC questions, read only the specific file. Each file contains: intent
 
 All files are in `references/sc/`.
 
-### Principle 1 — Perceivable
+### Principle 1 Perceivable
 
 | SC | File |
 |----|------|
@@ -204,7 +204,7 @@ All files are in `references/sc/`.
 | 1.4.12 Text Spacing (AA) | `references/sc/1.4.12.md` |
 | 1.4.13 Content on Hover or Focus (AA) | `references/sc/1.4.13.md` |
 
-### Principle 2 — Operable
+### Principle 2 Operable
 
 | SC | File |
 |----|------|
@@ -243,7 +243,7 @@ All files are in `references/sc/`.
 | 2.5.7 Dragging Movements (AA) ← NEW 2.2 | `references/sc/2.5.7.md` |
 | 2.5.8 Target Size Minimum (AA) ← NEW 2.2 | `references/sc/2.5.8.md` |
 
-### Principle 3 — Understandable
+### Principle 3 Understandable
 
 | SC | File |
 |----|------|
@@ -269,7 +269,7 @@ All files are in `references/sc/`.
 | 3.3.8 Accessible Authentication Minimum (AA) ← NEW 2.2 | `references/sc/3.3.8.md` |
 | 3.3.9 Accessible Authentication Enhanced (AAA) ← NEW 2.2 | `references/sc/3.3.9.md` |
 
-### Principle 4 — Robust
+### Principle 4 Robust
 
 | SC | File |
 |----|------|

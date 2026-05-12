@@ -15,7 +15,7 @@ metadata:
   spec: WCAG 2.2 (W3C Recommendation, October 2023)
 ---
 
-# WCAG 2.2 — Claude Entry Point
+# WCAG 2.2 Claude Entry Point
 
 This file is the Claude-specific entry point for the WCAG 2.2 accessibility reference package.
 
