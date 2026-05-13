@@ -305,6 +305,7 @@ Files in `references/testing/` provide step-by-step manual test procedures for i
 
 | SC | Name | Level | Testing file |
 |----|------|-------|-------------|
+| 1.3.1 | Info and Relationships | A | `references/testing/1.3.1.md` |
 | 4.1.2 | Name, Role, Value | A | `references/testing/4.1.2.md` |
 
 > As new testing patterns are authored, add a row to this table.
