@@ -50,9 +50,12 @@ Do **not** test:
 
 | Tool | Purpose | Free? |
 |------|---------|-------|
-| <Tool name — e.g. browser DevTools> | <What it is used for> | Yes / No |
-| <Tool name — e.g. axe DevTools browser extension> | <What it is used for> | Yes / No |
-| <Screen reader — e.g. NVDA + Firefox, VoiceOver + Safari> | <What it is used for> | Yes / No |
+| Browser DevTools (Chrome, Edge, or Firefox) | <What it is used for> | Yes |
+| A11y Quick Check browser extension | <Which checks to run from the extension for this SC> | Yes |
+| axe DevTools browser extension (or your preferred automation testing tool) | <What it is used for> | Yes (core) |
+| NVDA + Chrome, Edge, or Firefox (Windows) | <Screen reader verification purpose> | Yes |
+| JAWS + Chrome, Edge, or Firefox (Windows) | <Screen reader verification purpose> | No |
+| VoiceOver + Safari (macOS / iOS) | <Screen reader verification purpose> | Yes (built-in) |
 
 > **Note:** <Any version constraints, OS restrictions, or configuration steps needed before testing.>
 
