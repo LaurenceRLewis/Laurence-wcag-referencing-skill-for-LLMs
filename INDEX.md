@@ -306,6 +306,11 @@ Files in `references/testing/` provide step-by-step manual test procedures for i
 | SC | Name | Level | Testing file |
 |----|------|-------|-------------|
 | 1.3.1 | Info and Relationships | A | `references/testing/1.3.1.md` |
+| 1.4.4 | Resize Text | AA | `references/testing/1.4.4.md` |
+| 1.4.11 | Non-text Contrast | AA | `references/testing/1.4.11.md` |
+| 2.1.4 | Character Key Shortcuts | A | `references/testing/2.1.4.md` |
+| 2.4.3 | Focus Order | A | `references/testing/2.4.3.md` |
+| 2.4.6 | Headings and Labels | AA | `references/testing/2.4.6.md` |
 | 4.1.2 | Name, Role, Value | A | `references/testing/4.1.2.md` |
 
 > As new testing patterns are authored, add a row to this table.
