@@ -2,9 +2,22 @@
 
 ## Conformance Target
 
-This project targets **WCAG 2.2 Level AA** conformance.
+This project targets **WCAG 2.2 Level AA**.
 
-All new components and modifications to existing components must be assessed against WCAG 2.2 AA. Do not assume WCAG 2.1 equivalence without checking for new 2.2 criteria (2.4.11, 2.4.12, 2.4.13, 2.5.7, 2.5.8, 3.2.6, 3.3.7, 3.3.8, 3.3.9).
+All new components and modifications to existing components must be assessed against WCAG 2.2 AA. Do not assume WCAG 2.1 equivalence without checking the new WCAG 2.2 criteria below. For details on what changed between 2.1 and 2.2, see the [WCAG 2.1→2.2 comparison](https://www.w3.org/WAI/standards-guidelines/wcag/compare/).
+
+### WCAG 2.2 criteria to check
+- 2.4.11 Focus Appearance (AA): focus indicators must be visible and meet contrast and size requirements.
+- 2.4.12 Focus Not Obscured (AA): focus must remain visible and not be hidden by overlays.
+- 2.4.13 Focus Appearance (Enhanced) (AA): focus appearance must be consistent across states.
+- 2.5.7 Dragging Movements (AA): provide alternatives for dragging interactions.
+- 2.5.8 Target Size (Minimum) (AA): interactive controls need minimum size and spacing.
+- 3.2.6 Consistent Help (AA): help must be available and consistent when needed.
+- 3.3.7 Accessible Authentication (AA): authentication must include accessible alternatives and recovery options.
+- 3.3.8 Accessible Authentication for Transactions (AA): extend accessible authentication to transaction flows.
+- 3.3.9 Redundant Entry (AA): avoid unnecessary repeated entry of information.
+
+When assessing components, consult the full criterion text and the WCAG 2.1→2.2 comparison link to determine applicability and testing implications.
 
 Specification reference: https://www.w3.org/TR/WCAG22/
 
@@ -53,7 +66,7 @@ Full criterion text: https://www.w3.org/TR/WCAG22/
 
 ## AT Behaviour Notes
 
-These notes reflect real-world AT behaviour that is not fully defined by specification. Treat them as tested observations, not normative requirements.
+These notes reflect real-world AT behaviour observed during internal testing with the testing stack listed below. They are project-specific observations, not normative specifications. When AT behaviour conflicts with normative specifications, prioritize user experience, document the decision, and note it in Known Gaps and Project-Specific Notes.
 
 ### aria-activedescendant
 
@@ -155,4 +168,11 @@ Expert opinion sources (Adrian Roselli, Scott O'Hara, Léonie Watson, TPGi) are 
 
 ## Known Gaps and Project-Specific Notes
 
-Add entries here as they are discovered during development or testing. Include the component name, the criterion affected, the reason for non-conformance, and any agreed workaround.
+Add entries here as they are discovered during development or testing. For each entry, document:
+- **Component name**
+- **Criterion affected** (e.g., 2.4.11)
+- **Reason for non-conformance** (e.g., technical limitation, third-party constraint)
+- **User impact** (what accessibility goal is affected)
+- **Mitigation or workaround** (alternative solution provided to users, if applicable)
+
+If a component cannot meet WCAG 2.2 AA, prioritize documenting the limitation and providing alternative solutions or mitigations that preserve user access.
