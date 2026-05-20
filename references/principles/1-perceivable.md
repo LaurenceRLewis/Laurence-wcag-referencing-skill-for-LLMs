@@ -249,7 +249,7 @@ Information and user interface components must be presentable to users in ways t
 
 **Fails when:** Contrast falls below threshold; placeholder text treated as normal text (placeholder is often exempt but should still aim for 4.5:1 for usability).
 
-**How to calculate:** Use a contrast analyser (e.g. APCA, or the WCAG relative luminance formula). Contrast = (L1 + 0.05) / (L2 + 0.05) where L1 is the lighter colour.
+**How to calculate:** Use the WCAG relative luminance formula: Contrast = (L1 + 0.05) / (L2 + 0.05) where L1 is the lighter colour. Tools such as the Colour Contrast Analyser (TPGi) or browser DevTools implement this formula. Note: APCA is a separate algorithm proposed for WCAG 3.0 — do not use APCA values to assess WCAG 2.2 conformance.
 
 **WCAG 2.2 change:** No change. (Note: WCAG 3.0 will replace this with APCA, but 2.2 retains the existing formula.)
 

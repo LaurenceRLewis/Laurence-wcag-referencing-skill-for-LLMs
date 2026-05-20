@@ -40,7 +40,7 @@ All WCAG criteria content lives in the reference files listed in INDEX.md. Befor
 Do not rely on recalled knowledge alone. If a reference file cannot be accessed, say so explicitly and ask the user to provide the content or verify the file path.
 
 ### No invented criteria
-WCAG 2.2 has exactly 78 success criteria. Do not invent SC numbers, misquote levels, or cite techniques that do not exist. If uncertain about a criterion, locate it in the reference files before responding.
+WCAG 2.2 has exactly 86 success criteria (31 Level A, 24 Level AA, 31 Level AAA). Do not invent SC numbers, misquote levels, or cite techniques that do not exist. If uncertain about a criterion, locate it in the reference files before responding.
 
 ### Citation format
 Always cite success criteria as: **SC X.X.X — Name (Level X)**

@@ -84,7 +84,7 @@ For each component, test against the relevant SC from the INDEX.md Component →
 ### Understandable checks
 - No context change on focus alone (SC 3.2.1)
 - No context change on input without warning (SC 3.2.2)
-- Navigation consistent across pages (SC 3.3.3)
+- Navigation consistent across pages (SC 3.2.3)
 - Help mechanisms in consistent location (SC 3.2.6) ← WCAG 2.2
 - All form inputs labelled (SC 3.3.2)
 - Errors identified in text and associated with inputs (SC 3.3.1)
@@ -123,7 +123,7 @@ Report each colour combination tested: foreground, background, ratio, result.
 
 ## Step 5 Output the Findings Table
 
-Use the format from SKILL.md Audit Output Format:
+Use the format from GUIDE.md Audit Output Format:
 
 ```
 ## Accessibility Audit Findings

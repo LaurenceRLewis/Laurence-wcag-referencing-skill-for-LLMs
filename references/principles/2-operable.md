@@ -284,6 +284,7 @@ User interface components and navigation must be operable.
 **Intent:** The keyboard focus indicator meets minimum size and contrast requirements.
 
 **Requirements:**
+- The focus indicator encloses the visual presentation of the UI component
 - The focus indicator area is at least as large as a 2px perimeter around the unfocused component
 - The focus indicator has at least 3:1 contrast ratio between focused and unfocused states
 
@@ -313,7 +314,7 @@ User interface components and navigation must be operable.
 ### SC 2.5.2 — Pointer Cancellation (Level A)
 **Intent:** For single-pointer actions, at least one of: no down-event trigger, ability to abort/undo, up-event reversal, or essential exception.
 
-**Intent:** Prevent accidental activation — actions should fire on the up-event (mouse-up, touch-end), not down-event, so users can cancel by moving the pointer away.
+**Why:** Prevent accidental activation — actions should fire on the up-event (mouse-up, touch-end), not down-event, so users can cancel by moving the pointer away.
 
 **Passes when:** Click fires on mouseup/pointerup; user can drag away before releasing to cancel.
 

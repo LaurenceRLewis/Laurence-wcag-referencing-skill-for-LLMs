@@ -13,7 +13,7 @@ The most basic web accessibility features. Failure to meet Level A SC creates ba
 
 **Required for:** Any claim of WCAG conformance. No organisation can claim WCAG conformance without meeting all Level A criteria.
 
-**Number of SC in WCAG 2.2:** 30 Level A criteria.
+**Number of SC in WCAG 2.2:** 31 Level A criteria.
 
 ---
 
@@ -30,18 +30,18 @@ The level most widely adopted for legal compliance, public sector requirements, 
 
 **Includes:** All Level A criteria + Level AA criteria.
 
-**Number of SC in WCAG 2.2:** 20 Level AA criteria (50 total including Level A).
+**Number of SC in WCAG 2.2:** 24 Level AA criteria (55 total including Level A).
 
 ---
 
 ### Level AAA (For Reference)
 The highest level of WCAG criteria. Level AAA is **not expected as a blanket conformance target** — the W3C itself notes that it is generally not possible to satisfy all Level AAA criteria for all types of content.
 
-Level AAA criteria are included in this skill as a reference because they represent best practice, and some organisations choose to meet individual AAA criteria for specific components, audiences, or content types — for example, a government health service targeting users with cognitive disabilities might adopt SC 3.3.5 (Help) or SC 3.3.8 (Accessible Authentication Enhanced).
+Level AAA criteria are included in this skill as a reference because they represent best practice, and some organisations choose to meet individual AAA criteria for specific components, audiences, or content types — for example, a government health service targeting users with cognitive disabilities might adopt SC 3.3.5 (Help) or SC 3.3.9 (Accessible Authentication Enhanced).
 
 **Unless you or your organisation have specifically committed to Level AAA, you do not need to worry about AAA criteria.** When they come up in this skill, they are flagged clearly and noted as reference only.
 
-**Number of SC in WCAG 2.2:** 28 Level AAA criteria (78 total including A and AA).
+**Number of SC in WCAG 2.2:** 31 Level AAA criteria (86 total including A and AA).
 
 ---
 
