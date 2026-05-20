@@ -383,6 +383,94 @@ Expert opinion sources (Adrian Roselli, Scott O'Hara, Léonie Watson, TPGi) are 
 
 ---
 
+---
+
+## Content Writing Standards: WCAG AAA Guidance
+
+This section covers WCAG 2.2 AAA success criteria that directly affect how content is
+written. AAA is not the project conformance target. Apply these criteria where possible
+and flag deliberate departures in the Known Gaps section below.
+
+| SC | Name | Level |
+|---|---|---|
+| 3.1.3 | Unusual Words | AAA |
+| 3.1.4 | Abbreviations | AAA |
+| 3.1.5 | Reading Level | AAA |
+| 3.1.6 | Pronunciation | AAA |
+
+---
+
+### 3.1.3 Unusual Words (AAA)
+
+- Provide definitions for technical terms, jargon, idioms, and words used in an unusual
+  or restricted way.
+- Preferred approaches in order of preference: define the term inline on first use,
+  provide a glossary linked from the page, use the HTML `<dfn>` element to mark the
+  defining instance of a term.
+- Do not assume familiarity with accessibility-specific terminology (WCAG, ARIA, AT,
+  screen reader) on pages intended for a general audience. Define these terms on first use.
+- Example:
+
+```html
+  <p>
+    This page has been tested with a
+    <dfn>screen reader</dfn>, software that converts
+    text and interface elements to speech or braille output.
+  </p>
+```
+
+---
+
+### 3.1.4 Abbreviations (AAA)
+
+- Provide the expanded form of abbreviations on first use on a page.
+- Preferred approach: expand inline on first use ("Web Content Accessibility Guidelines
+  (WCAG)"), then mark subsequent uses with the HTML `<abbr>` element and a `title`
+  attribute.
+- Do not rely solely on `<abbr title>` as the expansion mechanism. The `title` attribute
+  is not accessible on touch devices and is not reliably announced by all AT.
+- Example pattern:
+
+```html
+  <p>
+    Web Content Accessibility Guidelines (WCAG) define how to make content accessible.
+    All components are tested against
+    <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2.
+  </p>
+```
+
+---
+
+### 3.1.5 Reading Level (AAA)
+
+- Write content at the lowest reading level appropriate for the audience without losing
+  meaning or accuracy.
+- Where content requires a reading level more advanced than lower secondary education
+  (approximately age 11 to 14), provide a supplementary simplified version or summary.
+- Use plain language principles: short sentences, active voice, common words, one idea
+  per paragraph.
+- Avoid nominalisations where possible. Use "we decided" rather than "a decision was
+  made". Use "apply" rather than "make an application".
+- Error messages, instructions, and help text are particularly important to write at a
+  low reading level. A user struggling with a form does not need complex language
+  compounding the difficulty.
+
+---
+
+### 3.1.6 Pronunciation (AAA)
+
+- Where the meaning of a word depends on its pronunciation and is ambiguous in context,
+  provide a mechanism to identify the correct pronunciation.
+- Applies most often to proper nouns, technical terms with non-obvious pronunciation,
+  and homographs (words spelled the same but pronounced differently, such as "lead" the
+  metal versus "lead" the verb).
+- Approaches: provide phonetic spelling in parentheses on first use, or link to an audio
+  pronunciation.
+- This criterion applies to a narrow set of content in most projects. Flag relevant
+  instances in the Known Gaps section.
+
+---
+
 ## Known Gaps and Project-Specific Notes
 
 Add entries here as they are discovered during development or testing. Include the component name, the criterion affected, the reason for non-conformance, and any agreed workaround. Note any component libraries in use and their known AT support gaps.
