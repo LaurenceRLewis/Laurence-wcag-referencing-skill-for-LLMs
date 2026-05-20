@@ -65,6 +65,7 @@ These notes reflect real-world AT behaviour that is not fully defined by specifi
 
 - `aria-live="polite"` is preferred for most status messages. Use `assertive` only for genuine errors or time-sensitive information.
 - Inject live region content dynamically after the region is rendered, not simultaneously. Some AT will not announce content present in the DOM on page load.
+- Render the live region container on page load and update its text content. Do not insert and remove the container dynamically, as AT may miss the announcement if the region was not present in the DOM when the content appeared.
 - iOS VoiceOver does not reliably announce `role="status"` without an explicit `aria-live="polite"` attribute. Always pair them.
 
 ### dialog element
@@ -104,13 +105,48 @@ If a suggested pattern has known issues in any of these environments, state that
 
 ## Code Style and Conventions
 
-These conventions apply to all HTML, TypeScript, and SCSS in this project.
+These conventions apply to all HTML, TypeScript, JavaScript, and SCSS in this project.
+
+### First Rule of ARIA
+
+If a native HTML element exists that provides the required semantics and behaviour, use it. Do not use ARIA to replicate what native HTML already does. ARIA is for filling gaps that native HTML cannot cover.
+
+### Native Elements Over ARIA Roles
+
+- Always use native `<button>` for interactive controls. Never use `<div role="button">` or `<span role="button">`.
+- Never add `role="button"` to a native `<button>` element. The role is implicit and the redundant attribute adds noise without benefit.
+- Never add `role="dialog"` to a native `<dialog>` element. The role is implicit.
+- Never add `role="navigation"` to a native `<nav>` element, `role="main"` to `<main>`, `role="banner"` to `<header>`, or `role="contentinfo"` to `<footer>`. All landmark roles are implicit on their native elements.
+- Use `<a href>` for navigation to a URL. Use `<button>` for triggering an action. Do not use `<a>` without an `href` as a button substitute.
+- Do not use `placeholder` as a label substitute. Always provide a visible `<label>` element associated via `for` and `id`.
+
+### Why native `<button>` is required
+
+A native `<button>` provides all of the following without additional code:
+
+- Focusable by default, no `tabindex` required.
+- Activated by both Enter and Space keys natively.
+- Correct `button` role exposed to the accessibility tree automatically.
+- `disabled` attribute sets AT semantics, removes from tab order, and blocks click events simultaneously.
+- Participates in form submission and reset without JavaScript.
+- Click events fire on keyboard activation without additional handlers.
+- Consistent AT announcements across NVDA, JAWS, VoiceOver, and TalkBack.
+
+A `<div role="button">` requires manual implementation of every item in the list above and is still less reliable across AT.
 
 ### General
 
 - Prefer minimal, targeted changes over broad rewrites. Change only what is necessary to achieve the outcome.
 - Prefer CSS-only solutions where they are sufficient and do not compromise accessibility.
 - Do not introduce new dependencies to solve problems that can be solved with existing browser APIs or native HTML elements.
+
+### Focus Management
+
+- After a modal or dialog opens, move focus to the first focusable element or the dialog container.
+- After a modal or dialog closes, return focus to the trigger element that opened it.
+- After dynamic content updates that change the page context, move focus to a consistent landmark or heading so AT users are oriented.
+- Update `document.title` to reflect the current page or view on every significant navigation or context change.
+- Hold references to trigger elements before opening overlays or dialogs so focus can be reliably returned on close.
 
 ### TypeScript and JavaScript
 
@@ -119,12 +155,13 @@ These conventions apply to all HTML, TypeScript, and SCSS in this project.
 - Use capture-phase event listeners (`addEventListener(type, handler, true)`) where event delegation or ordering requires it. Document why capture phase is used in a comment.
 - Remove attributes cleanly using `removeAttribute()` rather than setting empty strings or `null`.
 - Prefer `addEventListener` and `removeEventListener` over inline event handlers.
+- Clean up event listeners when the component or view is destroyed to prevent memory leaks and duplicate handler registration.
 
 ### HTML
 
-- Use native HTML elements and their built-in semantics before reaching for ARIA. A `<button>` is preferable to a `<div role="button">`.
+- Use native HTML elements and their built-in semantics before reaching for ARIA. See Native Elements Over ARIA Roles above.
 - Do not use ARIA to override native semantics unless there is a documented, tested reason.
-- Dynamic ARIA attribute changes (toggling `aria-expanded`, `aria-hidden`, etc.) should be driven by state, not by direct DOM manipulation scattered across handlers.
+- Dynamic ARIA attribute changes (`aria-expanded`, `aria-hidden`, etc.) should be driven by state. Centralise attribute updates rather than scattering them across multiple event handlers.
 
 ### SCSS
 
